@@ -7,6 +7,7 @@ using System.Windows.Forms;
 
 namespace CsPong
 {
+
     internal class Program
     {
         static void Main(string[] args)
