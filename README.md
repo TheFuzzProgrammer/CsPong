@@ -1,1 +1,1 @@
-CsPong
+C# Based Pong game
