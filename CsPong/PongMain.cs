@@ -12,8 +12,15 @@ namespace CsPong
 {
     public partial class PongMain : Form
     {
+        private bool cursorPosition;
+        private int CX,CY;
+        private Point pointer;
+        private Ball ball;
+        private Paddle paddle;
         public PongMain()
         {
+            pointer = new Point();
+            cursorPosition = false;
             InitializeComponent();
         }
 
@@ -29,6 +36,29 @@ namespace CsPong
                 this.WindowState = FormWindowState.Minimized;
             }
         }
+
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (cursorPosition)
+            {   
+                pointer.X = Cursor.Position.X + CX;
+                pointer.Y = Cursor.Position.Y + CY;
+                this.Location = pointer;
+            }
+        }
+
+        private void panel1_MouseUp(object sender, MouseEventArgs e)
+        {
+            cursorPosition = false;
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            cursorPosition = true;
+            CX = this.Location.X - Cursor.Position.X;
+            CY = this.Location.Y - Cursor.Position.Y;
+        }
+
 
     }
 }

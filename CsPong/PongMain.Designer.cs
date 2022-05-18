@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.closeLabel = new System.Windows.Forms.Label();
             this.minimizeLabel = new System.Windows.Forms.Label();
+            this.closeLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,17 +43,9 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1024, 29);
             this.panel1.TabIndex = 0;
-            // 
-            // closeLabel
-            // 
-            this.closeLabel.AutoSize = true;
-            this.closeLabel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.closeLabel.Location = new System.Drawing.Point(1000, 0);
-            this.closeLabel.Name = "closeLabel";
-            this.closeLabel.Size = new System.Drawing.Size(24, 25);
-            this.closeLabel.TabIndex = 0;
-            this.closeLabel.Text = "X";
-            this.closeLabel.Click += new System.EventHandler(this.closeLabel_Click);
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
+            this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
             // 
             // minimizeLabel
             // 
@@ -65,6 +57,17 @@
             this.minimizeLabel.TabIndex = 1;
             this.minimizeLabel.Text = "-";
             this.minimizeLabel.Click += new System.EventHandler(this.minimizeLabel_Click);
+            // 
+            // closeLabel
+            // 
+            this.closeLabel.AutoSize = true;
+            this.closeLabel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.closeLabel.Location = new System.Drawing.Point(1000, 0);
+            this.closeLabel.Name = "closeLabel";
+            this.closeLabel.Size = new System.Drawing.Size(24, 25);
+            this.closeLabel.TabIndex = 0;
+            this.closeLabel.Text = "X";
+            this.closeLabel.Click += new System.EventHandler(this.closeLabel_Click);
             // 
             // PongMain
             // 
