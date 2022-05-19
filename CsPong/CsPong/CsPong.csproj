@@ -53,6 +53,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Ball.cs" />
+    <Compile Include="MainWindowForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainWindowForm.Designer.cs">
+      <DependentUpon>MainWindowForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PongGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PongGame.Designer.cs">
+      <DependentUpon>PongGame.cs</DependentUpon>
+    </Compile>
     <Compile Include="Paddle.cs" />
     <Compile Include="PongMain.cs">
       <SubType>Form</SubType>
@@ -62,15 +74,51 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="MainWindowForm.resx">
+      <DependentUpon>MainWindowForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PongGame.resx">
+      <DependentUpon>PongGame.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PongMain.resx">
       <DependentUpon>PongMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="media\pqbkg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="media\ball.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="media\superball.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="media\superpaddle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="media\pong.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="media\spanelbg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="media\background.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -15,13 +15,14 @@ namespace CsPong
         private bool cursorPosition;
         private int CX,CY;
         private Point pointer;
-        private Ball ball;
-        private Paddle paddle;
         public PongMain()
         {
             pointer = new Point();
+            
             cursorPosition = false;
             InitializeComponent();
+            StartUi();
+
         }
 
         private void closeLabel_Click(object sender, EventArgs e)
@@ -40,7 +41,7 @@ namespace CsPong
         private void panel1_MouseMove(object sender, MouseEventArgs e)
         {
             if (cursorPosition)
-            {   
+            {
                 pointer.X = Cursor.Position.X + CX;
                 pointer.Y = Cursor.Position.Y + CY;
                 this.Location = pointer;
@@ -59,6 +60,18 @@ namespace CsPong
             CY = this.Location.Y - Cursor.Position.Y;
         }
 
+        private void StartUi()
+        {
+            MainWindowForm game;
+            game = new MainWindowForm
+            {
+                TopLevel = false,
+                Dock = DockStyle.Fill
+            };
 
+            containerPanel.Tag = game;
+            this.containerPanel.Controls.Add(game);
+            game.Show();
+        }
     }
 }
