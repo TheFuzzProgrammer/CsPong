@@ -28,25 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.bp = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
-            // panel1
+            // bp
             // 
-            this.panel1.BackgroundImage = global::CsPong.Properties.Resources.ball;
-            this.panel1.Location = new System.Drawing.Point(339, 332);
-            this.panel1.MaximumSize = new System.Drawing.Size(15, 15);
-            this.panel1.MinimumSize = new System.Drawing.Size(15, 15);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(15, 15);
-            this.panel1.TabIndex = 0;
+            this.bp.BackgroundImage = global::CsPong.Properties.Resources.ball;
+            this.bp.Location = new System.Drawing.Point(339, 332);
+            this.bp.MaximumSize = new System.Drawing.Size(15, 15);
+            this.bp.MinimumSize = new System.Drawing.Size(15, 15);
+            this.bp.Name = "bp";
+            this.bp.Size = new System.Drawing.Size(15, 15);
+            this.bp.TabIndex = 0;
             // 
             // PongGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1024, 739);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.bp);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PongGame";
             this.Text = "Form1";
@@ -56,6 +56,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel bp;
     }
 }

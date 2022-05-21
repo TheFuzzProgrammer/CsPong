@@ -20,5 +20,10 @@ namespace CsPong
         {
             return this.panel1;
         }
+
+        private void panel1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -61,7 +61,14 @@ namespace CsPong
         }
 
         private void StartUi()
-        {
+        {   
+
+            PongGame pong = new PongGame()
+            {
+                TopLevel = false,
+                Dock = DockStyle.Fill
+            };
+
             MainWindowForm game;
             game = new MainWindowForm
             {
@@ -69,9 +76,9 @@ namespace CsPong
                 Dock = DockStyle.Fill
             };
 
-            containerPanel.Tag = game;
-            this.containerPanel.Controls.Add(game);
-            game.Show();
+            containerPanel.Tag = pong;
+            this.containerPanel.Controls.Add(pong);
+            pong.Show();
         }
     }
 }
